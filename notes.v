@@ -22,11 +22,11 @@ wire [15:0] counter;
 music playnoteA(clk, speaker, counter);
 
 initial clk = 0;
-always #10 clk=!clk;
+always #1 clk=!clk;
 
 initial begin
-#10
-#10
+#1
+#1
 $display("%b, %b, %b", clk, speaker, counter);
 end 
 endmodule
