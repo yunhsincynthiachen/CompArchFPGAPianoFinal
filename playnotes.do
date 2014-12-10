@@ -5,6 +5,6 @@ add wave -position insertpoint  \
 sim:/testmusic/clk \
 sim:/testmusic/speaker \
 sim:/testmusic/counter
-run 100000
+run 5000000
 
 wave zoom full

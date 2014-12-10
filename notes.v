@@ -2,7 +2,7 @@ module music(clk, speaker, counter);
 input clk;
 output speaker;
 
-output reg [15:0] counter = 15'b0;
+output reg [15:0] counter = 16'b0;
 
 always @(posedge clk)
     if(counter==56817) begin
@@ -22,11 +22,11 @@ wire [15:0] counter;
 music playnoteA(clk, speaker, counter);
 
 initial clk = 0;
-always #1 clk=!clk;
+always #20 clk=!clk;
 
 initial begin
-#1
-#1
+#20
+#20
 $display("%b, %b, %b", clk, speaker, counter);
 end 
 endmodule
