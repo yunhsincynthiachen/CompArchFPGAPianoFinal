@@ -2,19 +2,20 @@
 // Piano LUT
 // Detects switches being pressed on FPGA and enables the notes
 
-module lut(sw, A, B, C, D, E, F, G, A2);
+module lut(sw, En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2);
 input[7:0] sw;
-output A=0, B=0, C=0, D=0, E=0, F=0, G=0, A2=0;
+output En_C=0, En_D=0, En_E=0, En_F=0, En_G=0, En_A=0, En_B=0, En_C2=0;
 
 always@(sw) begin
 case(sw[7:0])
-	8'b00000001 : A = 1;
-	8'b00000010 : B = 1;
-	8'b00000100 : C = 1;
-	8'b00001000 : D = 1;
-	8'b00010000 : E = 1;
-	8'b00100000 : F = 1;
-	8'b01000000 : G = 1;	8'b10000000 : A2 = 1;
+	8'b000 : En_C = 1;
+	8'b001 : En_D = 1;
+	8'b010 : En_E = 1;
+	8'b011 : En_F = 1;
+	8'b100 : En_G = 1;
+	8'b101 : En_A = 1;
+	8'b110 : En_B = 1;
+	8'b111 : En_C2 = 1;
 endcase
 end
 endmodule 
