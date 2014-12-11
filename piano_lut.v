@@ -7,15 +7,21 @@ input[7:0] sw;
 output En_C=0, En_D=0, En_E=0, En_F=0, En_G=0, En_A=0, En_B=0, En_C2=0;
 
 always@(sw) begin
-case(sw[7:0])
-	8'b000 : En_C = 1;
-	8'b001 : En_D = 1;
-	8'b010 : En_E = 1;
-	8'b011 : En_F = 1;
-	8'b100 : En_G = 1;
-	8'b101 : En_A = 1;
-	8'b110 : En_B = 1;
-	8'b111 : En_C2 = 1;
-endcase
+	if (sw[0]) begin En_C = 1;
+	end
+	if (sw[1]) begin En_D = 1;
+	end
+	if (sw[2]) begin En_E = 1;
+	end
+	if (sw[3]) begin En_F = 1;
+	end
+	if (sw[4]) begin En_G = 1;
+	end
+	if (sw[5]) begin En_A = 1;
+	end
+	if (sw[6]) begin En_B = 1;
+	end
+	if (sw[7]) begin En_C2 = 1;
+	end
 end
 endmodule 

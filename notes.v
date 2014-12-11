@@ -160,7 +160,7 @@ module testmusic;
 reg clk;
 reg EN_C;
 wire speaker;
-wire [15:0] counter;
+wire [16:0] counter;
 
 musicC playnote(clk, speaker, counter, EN_C);
 
