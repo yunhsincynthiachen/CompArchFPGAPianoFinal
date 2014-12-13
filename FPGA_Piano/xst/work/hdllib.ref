@@ -1,0 +1,12 @@
+MO musicC2 NULL ../CompArchFPGAPianoFinal/notes.v vlg42/music_c2.bin 1418505320
+MO top NULL top.v vlg6F/top.bin 1418505320
+MO inputconditioner NULL ../CompArchFPGAPianoFinal/inputConditioner_cc.v vlg0E/inputconditioner.bin 1418505320
+MO lut NULL ../CompArchFPGAPianoFinal/piano_lut_cc.v vlg49/lut.bin 1418505320
+MO lut_to_notes NULL ../CompArchFPGAPianoFinal/lut_to_notes.v vlg43/lut__to__notes.bin 1418505320
+MO musicA NULL ../CompArchFPGAPianoFinal/notes.v vlg4E/music_a.bin 1418505320
+MO musicB NULL ../CompArchFPGAPianoFinal/notes.v vlg4F/music_b.bin 1418505320
+MO musicC NULL ../CompArchFPGAPianoFinal/notes.v vlg50/music_c.bin 1418505320
+MO musicD NULL ../CompArchFPGAPianoFinal/notes.v vlg51/music_d.bin 1418505320
+MO musicE NULL ../CompArchFPGAPianoFinal/notes.v vlg52/music_e.bin 1418505320
+MO musicF NULL ../CompArchFPGAPianoFinal/notes.v vlg53/music_f.bin 1418505320
+MO musicG NULL ../CompArchFPGAPianoFinal/notes.v vlg54/music_g.bin 1418505320
