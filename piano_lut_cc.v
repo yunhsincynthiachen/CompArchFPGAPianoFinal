@@ -26,7 +26,7 @@ always@(sw_0,sw_1,sw_2,sw_3,sw_4,sw_5,sw_6,sw_7) begin
 end
 endmodule 
 
-module lut_test;
+/*module lut_test;
 reg[7:0] sw;
 wire En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2;
 
@@ -45,4 +45,4 @@ $display("%b %b %b %b %b %b %b %b", En_C, En_D, En_E, En_F, En_G, En_A, En_B, En
 end
 
 
-endmodule 
+endmodule */

@@ -156,7 +156,7 @@ always @(posedge clk)
 assign speaker = counter[15];
 endmodule
 
-module testmusic;
+/*module testmusic;
 reg clk;
 reg EN_C;
 wire speaker;
@@ -171,4 +171,5 @@ initial begin
 EN_C = 0;
 $display("%b, %b, %b", clk, speaker, counter, EN_C);
 end 
-endmodule
+endmodule*/
+

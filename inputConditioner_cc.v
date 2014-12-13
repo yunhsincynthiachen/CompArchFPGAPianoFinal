@@ -37,7 +37,7 @@ end
 endmodule
 
 
-module testConditioner;
+/*module testConditioner;
 wire conditioned;
 reg pin, clk;
 
@@ -102,4 +102,4 @@ pin = 1;
 pin = 0;
 
 end
-endmodule 
+endmodule */
