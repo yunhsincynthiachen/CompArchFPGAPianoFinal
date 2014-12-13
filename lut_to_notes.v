@@ -7,7 +7,16 @@ wire[16:0] counter1;
 wire[15:0] counter2;
 wire En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2;
 
-lut LUT(sw, En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2);
+inputconditioner cnote_ic(clk, sw[0], conditioned1);
+inputconditioner dnote_ic(clk, sw[1], conditioned2);
+inputconditioner enote_ic(clk, sw[2], conditioned3);
+inputconditioner fnote_ic(clk, sw[3], conditioned4);
+inputconditioner gnote_ic(clk, sw[4], conditioned5);
+inputconditioner anote_ic(clk, sw[5], conditioned6);
+inputconditioner bnote_ic(clk, sw[6], conditioned7);
+inputconditioner c2note_ic(clk, sw[7], conditioned8);
+
+lut LUT(conditioned1,conditioned2,conditioned3,conditioned4,conditioned5,conditioned6,conditioned7,conditioned8, En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2);
 
 musicC cnote(clk, speaker1, counter1, En_C);
 musicD dnote(clk, speaker2, counter1, En_D);
