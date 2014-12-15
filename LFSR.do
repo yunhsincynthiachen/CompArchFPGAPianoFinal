@@ -6,9 +6,11 @@ sim:/test_lut_LFSR/clk \
 sim:/test_lut_LFSR/LFSR_1 \
 sim:/test_lut_LFSR/LFSR_2 \
 sim:/test_lut_LFSR/LFSR_3 \
-sim:/test_lut_LFSR/conditioned1 \
-sim:/test_lut_LFSR/conditioned2 \
-sim:/test_lut_LFSR/conditioned3
+sim:/test_lut_LFSR/LFSR_4 \
+sim:/test_lut_LFSR/LFSR_5 \
+sim:/test_lut_LFSR/LFSR_6 \
+sim:/test_lut_LFSR/LFSR_7 \
+sim:/test_lut_LFSR/LFSR_8
 run 2000
 
 wave zoom full
