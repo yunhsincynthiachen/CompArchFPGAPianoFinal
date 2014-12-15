@@ -1,4 +1,4 @@
-vlog -reportprogress 300 -work work LFSR.v LFSR_lut.v LFSR_to_LUT.v inputConditioner_cc.v
+vlog -reportprogress 300 -work work LFSR.v LFSRlut.v LFSR_to_LUT.v inputConditioner_cc.v
 vsim -voptargs="+acc" test_lut_LFSR
 
 add wave -position insertpoint  \
