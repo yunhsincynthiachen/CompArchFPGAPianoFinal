@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-12-13T15:13:24</DateModified>
+  <DateModified>2014-12-15T22:56:10</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/CA14Final/FPGA_Piano/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/CA14Final/FPGA_Piano\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGA_Piano/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGA_Piano\</ImplementationReportsDirectory>
   <DateInitialized>2014-12-10T23:02:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

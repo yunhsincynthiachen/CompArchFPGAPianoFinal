@@ -1,0 +1,1041 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: top_LUT.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_LUT.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_LUT"
+Output Format                      : NGC
+Target Device                      : xc3s1000-5-ft256
+
+---- Source Options
+Top Module Name                    : top_LUT
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../LFSRlut.v" in library work
+Module <LFSR_lut> compiled
+Compiling verilog file "../LFSR.v" in library work
+Module <test_LFSRlut> compiled
+Module <LFSR1> compiled
+Module <LFSR2> compiled
+Module <LFSR3> compiled
+Module <LFSR4> compiled
+Module <LFSR5> compiled
+Module <LFSR6> compiled
+Module <LFSR7> compiled
+Module <LFSR8> compiled
+Compiling verilog file "../inputConditioner_cc.v" in library work
+Module <test_LFSR> compiled
+Compiling verilog file "../LFSR_to_LUT.v" in library work
+Module <inputconditioner> compiled
+Module <musicC> compiled
+Module <musicD> compiled
+Module <musicE> compiled
+Module <musicF> compiled
+Module <musicG> compiled
+Module <musicA> compiled
+Module <musicB> compiled
+Module <musicC2> compiled
+Module <lut_to_LFSR> compiled
+Compiling verilog file "../top_LUT.v" in library work
+Module <test_lut_LFSR> compiled
+Module <top_LUT> compiled
+No errors in compilation
+Analysis of file <"top_LUT.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top_LUT> in library <work>.
+
+Analyzing hierarchy for module <lut_to_LFSR> in library <work>.
+
+Analyzing hierarchy for module <inputconditioner> in library <work> with parameters.
+	counterwidth = "00000000000000000000000000000011"
+	waittime = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <LFSR_lut> in library <work>.
+
+Analyzing hierarchy for module <musicC> in library <work>.
+
+Analyzing hierarchy for module <musicD> in library <work>.
+
+Analyzing hierarchy for module <musicE> in library <work>.
+
+Analyzing hierarchy for module <musicF> in library <work>.
+
+Analyzing hierarchy for module <musicG> in library <work>.
+
+Analyzing hierarchy for module <musicA> in library <work>.
+
+Analyzing hierarchy for module <musicB> in library <work>.
+
+Analyzing hierarchy for module <musicC2> in library <work>.
+
+Analyzing hierarchy for module <LFSR1> in library <work>.
+
+Analyzing hierarchy for module <LFSR2> in library <work>.
+
+Analyzing hierarchy for module <LFSR3> in library <work>.
+
+Analyzing hierarchy for module <LFSR4> in library <work>.
+
+Analyzing hierarchy for module <LFSR5> in library <work>.
+
+Analyzing hierarchy for module <LFSR6> in library <work>.
+
+Analyzing hierarchy for module <LFSR7> in library <work>.
+
+Analyzing hierarchy for module <LFSR8> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top_LUT>.
+Module <top_LUT> is correct for synthesis.
+ 
+Analyzing module <lut_to_LFSR> in library <work>.
+Module <lut_to_LFSR> is correct for synthesis.
+ 
+Analyzing module <inputconditioner> in library <work>.
+	counterwidth = 32'sb00000000000000000000000000000011
+	waittime = 32'sb00000000000000000000000000000011
+Module <inputconditioner> is correct for synthesis.
+ 
+Analyzing module <LFSR_lut> in library <work>.
+Module <LFSR_lut> is correct for synthesis.
+ 
+Analyzing module <musicC> in library <work>.
+Module <musicC> is correct for synthesis.
+ 
+Analyzing module <musicD> in library <work>.
+Module <musicD> is correct for synthesis.
+ 
+Analyzing module <musicE> in library <work>.
+Module <musicE> is correct for synthesis.
+ 
+Analyzing module <musicF> in library <work>.
+Module <musicF> is correct for synthesis.
+ 
+Analyzing module <musicG> in library <work>.
+Module <musicG> is correct for synthesis.
+ 
+Analyzing module <musicA> in library <work>.
+Module <musicA> is correct for synthesis.
+ 
+Analyzing module <musicB> in library <work>.
+Module <musicB> is correct for synthesis.
+ 
+Analyzing module <musicC2> in library <work>.
+Module <musicC2> is correct for synthesis.
+ 
+Analyzing module <LFSR1> in library <work>.
+Module <LFSR1> is correct for synthesis.
+ 
+Analyzing module <LFSR2> in library <work>.
+Module <LFSR2> is correct for synthesis.
+ 
+Analyzing module <LFSR3> in library <work>.
+Module <LFSR3> is correct for synthesis.
+ 
+Analyzing module <LFSR4> in library <work>.
+Module <LFSR4> is correct for synthesis.
+ 
+Analyzing module <LFSR5> in library <work>.
+Module <LFSR5> is correct for synthesis.
+ 
+Analyzing module <LFSR6> in library <work>.
+Module <LFSR6> is correct for synthesis.
+ 
+Analyzing module <LFSR7> in library <work>.
+Module <LFSR7> is correct for synthesis.
+ 
+Analyzing module <LFSR8> in library <work>.
+Module <LFSR8> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <inputconditioner>.
+    Related source file is "../inputConditioner_cc.v".
+WARNING:Xst:646 - Signal <positiveedge> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <negativeedge> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <conditioned>.
+    Found 3-bit up counter for signal <counter>.
+    Found 1-bit xor2 for signal <counter$xor0000> created at line 18.
+    Found 1-bit register for signal <synchronizer0>.
+    Found 1-bit register for signal <synchronizer1>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <inputconditioner> synthesized.
+
+
+Synthesizing Unit <LFSR_lut>.
+    Related source file is "../LFSRlut.v".
+Unit <LFSR_lut> synthesized.
+
+
+Synthesizing Unit <musicC>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 17-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicC> synthesized.
+
+
+Synthesizing Unit <musicD>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 17-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicD> synthesized.
+
+
+Synthesizing Unit <musicE>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 17-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicE> synthesized.
+
+
+Synthesizing Unit <musicF>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 17-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicF> synthesized.
+
+
+Synthesizing Unit <musicG>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 16-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicG> synthesized.
+
+
+Synthesizing Unit <musicA>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 16-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicA> synthesized.
+
+
+Synthesizing Unit <musicB>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 16-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicB> synthesized.
+
+
+Synthesizing Unit <musicC2>.
+    Related source file is "../LFSR_to_LUT.v".
+    Found 16-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <musicC2> synthesized.
+
+
+Synthesizing Unit <LFSR1>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 10.
+    Found 1-bit xor2 for signal <LFSR_3$xor0000> created at line 11.
+    Found 1-bit xor2 for signal <LFSR_4$xor0000> created at line 12.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR1> synthesized.
+
+
+Synthesizing Unit <LFSR2>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 30.
+    Found 1-bit xor2 for signal <LFSR_4$xor0000> created at line 32.
+    Found 1-bit xor2 for signal <LFSR_6$xor0000> created at line 34.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR2> synthesized.
+
+
+Synthesizing Unit <LFSR3>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 50.
+    Found 1-bit xor2 for signal <LFSR_7$xor0000> created at line 55.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR3> synthesized.
+
+
+Synthesizing Unit <LFSR4>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_1$xor0000> created at line 67.
+    Found 1-bit xor2 for signal <LFSR_3$xor0000> created at line 69.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR4> synthesized.
+
+
+Synthesizing Unit <LFSR5>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 86.
+    Found 1-bit xor2 for signal <LFSR_4$xor0000> created at line 88.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR5> synthesized.
+
+
+Synthesizing Unit <LFSR6>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 104.
+    Found 1-bit xor2 for signal <LFSR_6$xor0000> created at line 108.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR6> synthesized.
+
+
+Synthesizing Unit <LFSR7>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 122.
+    Found 1-bit xor2 for signal <LFSR_3$xor0000> created at line 123.
+    Found 1-bit xor2 for signal <LFSR_4$xor0000> created at line 124.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR7> synthesized.
+
+
+Synthesizing Unit <LFSR8>.
+    Related source file is "../LFSR.v".
+    Found 8-bit register for signal <LFSR>.
+    Found 1-bit xor2 for signal <LFSR_1$xor0000> created at line 139.
+    Found 1-bit xor2 for signal <LFSR_2$xor0000> created at line 140.
+    Found 1-bit xor2 for signal <LFSR_7$xor0000> created at line 145.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <LFSR8> synthesized.
+
+
+Synthesizing Unit <lut_to_LFSR>.
+    Related source file is "../LFSR_to_LUT.v".
+WARNING:Xst:646 - Signal <counter8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <lut_to_LFSR> synthesized.
+
+
+Synthesizing Unit <top_LUT>.
+    Related source file is "../top_LUT.v".
+Unit <top_LUT> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 16
+ 16-bit up counter                                     : 4
+ 17-bit up counter                                     : 4
+ 3-bit up counter                                      : 8
+# Registers                                            : 88
+ 1-bit register                                        : 88
+# Xors                                                 : 28
+ 1-bit xor2                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 16
+ 16-bit up counter                                     : 4
+ 17-bit up counter                                     : 4
+ 3-bit up counter                                      : 8
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+# Xors                                                 : 28
+ 1-bit xor2                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top_LUT> ...
+
+Optimizing unit <inputconditioner> ...
+
+Optimizing unit <LFSR1> ...
+
+Optimizing unit <LFSR2> ...
+
+Optimizing unit <LFSR3> ...
+
+Optimizing unit <LFSR4> ...
+
+Optimizing unit <LFSR5> ...
+
+Optimizing unit <LFSR6> ...
+
+Optimizing unit <LFSR7> ...
+
+Optimizing unit <LFSR8> ...
+
+Optimizing unit <lut_to_LFSR> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_LUT, actual ratio is 2.
+FlipFlop topLUT/lfsr1_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr2_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr3_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr4_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr5_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr6_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr7_ic/conditioned has been replicated 1 time(s)
+FlipFlop topLUT/lfsr8_ic/conditioned has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top_LUT> :
+	Found 4-bit shift register for signal <topLUT/lfsr_8/LFSR_6>.
+	Found 3-bit shift register for signal <topLUT/lfsr_7/LFSR_7>.
+	Found 3-bit shift register for signal <topLUT/lfsr_6/LFSR_5>.
+	Found 3-bit shift register for signal <topLUT/lfsr_5/LFSR_7>.
+	Found 4-bit shift register for signal <topLUT/lfsr_4/LFSR_7>.
+	Found 4-bit shift register for signal <topLUT/lfsr_3/LFSR_6>.
+	Found 3-bit shift register for signal <topLUT/lfsr_1/LFSR_7>.
+	Found 2-bit shift register for signal <topLUT/lfsr1_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr2_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr3_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr4_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr5_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr6_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr7_ic/synchronizer1>.
+	Found 2-bit shift register for signal <topLUT/lfsr8_ic/synchronizer1>.
+Unit <top_LUT> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 212
+ Flip-Flops                                            : 212
+# Shift Registers                                      : 15
+ 2-bit shift register                                  : 8
+ 3-bit shift register                                  : 4
+ 4-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_LUT.ngr
+Top Level Output File Name         : top_LUT
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 538
+#      GND                         : 1
+#      INV                         : 18
+#      LUT1                        : 126
+#      LUT2                        : 32
+#      LUT3                        : 24
+#      LUT3_D                      : 8
+#      LUT4                        : 32
+#      MUXCY                       : 164
+#      VCC                         : 1
+#      XORCY                       : 132
+# FlipFlops/Latches                : 227
+#      FD                          : 8
+#      FDE                         : 63
+#      FDR                         : 24
+#      FDRE                        : 132
+# Shift Registers                  : 15
+#      SRL16                       : 8
+#      SRL16E                      : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-5 
+
+ Number of Slices:                      155  out of   7680     2%  
+ Number of Slice Flip Flops:            227  out of  15360     1%  
+ Number of 4 input LUTs:                255  out of  15360     1%  
+    Number used as logic:               240
+    Number used as Shift registers:      15
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    173     9%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+topLUT/C2redoCLK/counter_15        | NONE(topLUT/lfsr_8/LFSR_1)| 6     |
+topLUT/BredoCLK/counter_15         | NONE(topLUT/lfsr_7/LFSR_1)| 7     |
+topLUT/AredoCLK/counter_15         | NONE(topLUT/lfsr_6/LFSR_1)| 7     |
+topLUT/GredoCLK/counter_15         | NONE(topLUT/lfsr_5/LFSR_1)| 7     |
+topLUT/FredoCLK/counter_16         | NONE(topLUT/lfsr_4/LFSR_1)| 6     |
+topLUT/EredoCLK/counter_16         | NONE(topLUT/lfsr_3/LFSR_1)| 6     |
+topLUT/DredoCLK/counter_16         | NONE(topLUT/lfsr_2/LFSR_1)| 8     |
+topLUT/CredoCLK/counter_16         | NONE(topLUT/lfsr_1/LFSR_1)| 7     |
+clk                                | BUFGP                     | 188   |
+-----------------------------------+---------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.390ns (Maximum Frequency: 185.540MHz)
+   Minimum input arrival time before clock: 1.778ns
+   Maximum output required time after clock: 6.280ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/C2redoCLK/counter_15'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_8/Mshreg_LFSR_6 (FF)
+  Destination:       topLUT/lfsr_8/LFSR_6 (FF)
+  Source Clock:      topLUT/C2redoCLK/counter_15 rising
+  Destination Clock: topLUT/C2redoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_8/Mshreg_LFSR_6 to topLUT/lfsr_8/LFSR_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_8/Mshreg_LFSR_6 (topLUT/lfsr_8/Mshreg_LFSR_6)
+     FDE:D                     0.176          topLUT/lfsr_8/LFSR_6
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/BredoCLK/counter_15'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 10 / 7
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_7/Mshreg_LFSR_7 (FF)
+  Destination:       topLUT/lfsr_7/LFSR_7 (FF)
+  Source Clock:      topLUT/BredoCLK/counter_15 rising
+  Destination Clock: topLUT/BredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_7/Mshreg_LFSR_7 to topLUT/lfsr_7/LFSR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_7/Mshreg_LFSR_7 (topLUT/lfsr_7/Mshreg_LFSR_7)
+     FDE:D                     0.176          topLUT/lfsr_7/LFSR_7
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/AredoCLK/counter_15'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 9 / 7
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_6/Mshreg_LFSR_5 (FF)
+  Destination:       topLUT/lfsr_6/LFSR_5 (FF)
+  Source Clock:      topLUT/AredoCLK/counter_15 rising
+  Destination Clock: topLUT/AredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_6/Mshreg_LFSR_5 to topLUT/lfsr_6/LFSR_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_6/Mshreg_LFSR_5 (topLUT/lfsr_6/Mshreg_LFSR_5)
+     FDE:D                     0.176          topLUT/lfsr_6/LFSR_5
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/GredoCLK/counter_15'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 9 / 7
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_5/Mshreg_LFSR_7 (FF)
+  Destination:       topLUT/lfsr_5/LFSR_7 (FF)
+  Source Clock:      topLUT/GredoCLK/counter_15 rising
+  Destination Clock: topLUT/GredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_5/Mshreg_LFSR_7 to topLUT/lfsr_5/LFSR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_5/Mshreg_LFSR_7 (topLUT/lfsr_5/Mshreg_LFSR_7)
+     FDE:D                     0.176          topLUT/lfsr_5/LFSR_7
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/FredoCLK/counter_16'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 8 / 6
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_4/Mshreg_LFSR_7 (FF)
+  Destination:       topLUT/lfsr_4/LFSR_7 (FF)
+  Source Clock:      topLUT/FredoCLK/counter_16 rising
+  Destination Clock: topLUT/FredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_4/Mshreg_LFSR_7 to topLUT/lfsr_4/LFSR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_4/Mshreg_LFSR_7 (topLUT/lfsr_4/Mshreg_LFSR_7)
+     FDE:D                     0.176          topLUT/lfsr_4/LFSR_7
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/EredoCLK/counter_16'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 8 / 6
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_3/Mshreg_LFSR_6 (FF)
+  Destination:       topLUT/lfsr_3/LFSR_6 (FF)
+  Source Clock:      topLUT/EredoCLK/counter_16 rising
+  Destination Clock: topLUT/EredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_3/Mshreg_LFSR_6 to topLUT/lfsr_3/LFSR_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_3/Mshreg_LFSR_6 (topLUT/lfsr_3/Mshreg_LFSR_6)
+     FDE:D                     0.176          topLUT/lfsr_3/LFSR_6
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/DredoCLK/counter_16'
+  Clock period: 2.355ns (frequency: 424.547MHz)
+  Total number of paths / destination ports: 11 / 8
+-------------------------------------------------------------------------
+Delay:               2.355ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_2/LFSR_7 (FF)
+  Destination:       topLUT/lfsr_2/LFSR_2 (FF)
+  Source Clock:      topLUT/DredoCLK/counter_16 rising
+  Destination Clock: topLUT/DredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_2/LFSR_7 to topLUT/lfsr_2/LFSR_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.626   1.074  topLUT/lfsr_2/LFSR_7 (topLUT/lfsr_2/LFSR_7)
+     LUT2:I0->O            1   0.479   0.000  topLUT/lfsr_2/Mxor_LFSR_6_xor0000_Result1 (topLUT/lfsr_2/LFSR_6_xor0000)
+     FDE:D                     0.176          topLUT/lfsr_2/LFSR_6
+    ----------------------------------------
+    Total                      2.355ns (1.281ns logic, 1.074ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'topLUT/CredoCLK/counter_16'
+  Clock period: 2.956ns (frequency: 338.295MHz)
+  Total number of paths / destination ports: 10 / 7
+-------------------------------------------------------------------------
+Delay:               2.956ns (Levels of Logic = 0)
+  Source:            topLUT/lfsr_1/Mshreg_LFSR_7 (FF)
+  Destination:       topLUT/lfsr_1/LFSR_7 (FF)
+  Source Clock:      topLUT/CredoCLK/counter_16 rising
+  Destination Clock: topLUT/CredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_1/Mshreg_LFSR_7 to topLUT/lfsr_1/LFSR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   2.780   0.000  topLUT/lfsr_1/Mshreg_LFSR_7 (topLUT/lfsr_1/Mshreg_LFSR_7)
+     FDE:D                     0.176          topLUT/lfsr_1/LFSR_7
+    ----------------------------------------
+    Total                      2.956ns (2.956ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.390ns (frequency: 185.540MHz)
+  Total number of paths / destination ports: 3872 / 484
+-------------------------------------------------------------------------
+Delay:               5.390ns (Levels of Logic = 3)
+  Source:            topLUT/lfsr2_ic/conditioned_1 (FF)
+  Destination:       topLUT/DredoCLK/counter_16 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: topLUT/lfsr2_ic/conditioned_1 to topLUT/DredoCLK/counter_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             26   0.626   1.569  topLUT/lfsr2_ic/conditioned_1 (topLUT/lfsr2_ic/conditioned_1)
+     LUT4:I3->O            1   0.479   0.000  topLUT/DredoCLK/counter_and0000_wg_lut<3> (topLUT/DredoCLK/counter_and0000_wg_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  topLUT/DredoCLK/counter_and0000_wg_cy<3> (topLUT/DredoCLK/counter_and0000_wg_cy<3>)
+     MUXCY:CI->O          17   0.246   1.143  topLUT/DredoCLK/counter_and0000_wg_cy<4> (topLUT/DredoCLK/counter_and0000)
+     FDRE:R                    0.892          topLUT/DredoCLK/counter_0
+    ----------------------------------------
+    Total                      5.390ns (2.678ns logic, 2.712ns route)
+                                       (49.7% logic, 50.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.778ns (Levels of Logic = 1)
+  Source:            sw<0> (PAD)
+  Destination:       topLUT/lfsr1_ic/Mshreg_synchronizer1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<0> to topLUT/lfsr1_ic/Mshreg_synchronizer1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  sw_0_IBUF (sw_0_IBUF)
+     SRL16:D                   0.382          topLUT/lfsr1_ic/Mshreg_synchronizer1
+    ----------------------------------------
+    Total                      1.778ns (1.097ns logic, 0.681ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/FredoCLK/counter_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_4/LFSR_0 (FF)
+  Destination:       gpioBank1<3> (PAD)
+  Source Clock:      topLUT/FredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_4/LFSR_0 to gpioBank1<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_4/LFSR_0 (topLUT/lfsr_4/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank1_3_OBUF (gpioBank1<3>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/EredoCLK/counter_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_3/LFSR_0 (FF)
+  Destination:       gpioBank1<2> (PAD)
+  Source Clock:      topLUT/EredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_3/LFSR_0 to gpioBank1<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_3/LFSR_0 (topLUT/lfsr_3/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank1_2_OBUF (gpioBank1<2>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/DredoCLK/counter_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_2/LFSR_0 (FF)
+  Destination:       gpioBank1<1> (PAD)
+  Source Clock:      topLUT/DredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_2/LFSR_0 to gpioBank1<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_2/LFSR_0 (topLUT/lfsr_2/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank1_1_OBUF (gpioBank1<1>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/CredoCLK/counter_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_1/LFSR_0 (FF)
+  Destination:       gpioBank1<0> (PAD)
+  Source Clock:      topLUT/CredoCLK/counter_16 rising
+
+  Data Path: topLUT/lfsr_1/LFSR_0 to gpioBank1<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_1/LFSR_0 (topLUT/lfsr_1/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank1_0_OBUF (gpioBank1<0>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/C2redoCLK/counter_15'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_8/LFSR_0 (FF)
+  Destination:       gpioBank2<3> (PAD)
+  Source Clock:      topLUT/C2redoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_8/LFSR_0 to gpioBank2<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_8/LFSR_0 (topLUT/lfsr_8/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank2_3_OBUF (gpioBank2<3>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/BredoCLK/counter_15'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_7/LFSR_0 (FF)
+  Destination:       gpioBank2<2> (PAD)
+  Source Clock:      topLUT/BredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_7/LFSR_0 to gpioBank2<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_7/LFSR_0 (topLUT/lfsr_7/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank2_2_OBUF (gpioBank2<2>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/AredoCLK/counter_15'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_6/LFSR_0 (FF)
+  Destination:       gpioBank2<1> (PAD)
+  Source Clock:      topLUT/AredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_6/LFSR_0 to gpioBank2<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_6/LFSR_0 (topLUT/lfsr_6/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank2_1_OBUF (gpioBank2<1>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'topLUT/GredoCLK/counter_15'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            topLUT/lfsr_5/LFSR_0 (FF)
+  Destination:       gpioBank2<0> (PAD)
+  Source Clock:      topLUT/GredoCLK/counter_15 rising
+
+  Data Path: topLUT/lfsr_5/LFSR_0 to gpioBank2<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.626   0.745  topLUT/lfsr_5/LFSR_0 (topLUT/lfsr_5/LFSR_0)
+     OBUF:I->O                 4.909          gpioBank2_0_OBUF (gpioBank2<0>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.31 secs
+ 
+--> 
+
+Total memory usage is 273552 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

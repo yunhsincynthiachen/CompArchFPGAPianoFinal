@@ -1,0 +1,56 @@
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/FPGAPianoLFSR/top_LUT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/CA14/finalProject/CompArchFPGAPianoFinal/top.ucf -p xc3s1000-ft256-5 top_LUT.ngc top_LUT.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LUT_map.ncd top_LUT.ngd top_LUT.pcf 
+par -w -intstyle ise -ol high -t 1 top_LUT_map.ncd top_LUT.ncd top_LUT.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LUT.twx top_LUT.ncd -o top_LUT.twr top_LUT.pcf 
+bitgen -intstyle ise -f top_LUT.ut top_LUT.ncd 

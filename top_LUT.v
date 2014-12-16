@@ -20,6 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 module top_LUT(output [3:0]gpioBank1, output [3:0]gpioBank2, input clk, input [7:0]sw);
 
-	LFSR_to_LUT topLUT(clk, sw[7:0], gpioBank1[0], gpioBank1[1], gpioBank1[2], gpioBank1[3], gpioBank2[0], gpioBank2[1], gpioBank2[2], gpioBank2[3]);
+	lut_to_LFSR topLUT(clk, sw[7:0], gpioBank1[0], gpioBank1[1], gpioBank1[2], gpioBank1[3], gpioBank2[0], gpioBank2[1], gpioBank2[2], gpioBank2[3]);
 
 endmodule

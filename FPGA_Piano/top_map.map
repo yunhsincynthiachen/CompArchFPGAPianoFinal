@@ -9,7 +9,7 @@ Target Device  : xc3s1000
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sat Dec 13 16:15:31 2014
+Mapped Date    : Mon Dec 15 22:56:47 2014
 
 Mapping design into LUTs...
 Running directed packing...
@@ -44,9 +44,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                2.73
 
-Peak Memory Usage:  301 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  264 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
