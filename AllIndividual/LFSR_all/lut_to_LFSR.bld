@@ -1,0 +1,10 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -i -p xc3s1000-ft256-5 lut_to_LFSR.ngc
+lut_to_LFSR.ngd
+
+Reading NGO file
+"C:/CA14/finalProject/CompArchFPGAPianoFinal/AllIndividual/LFSR_all/lut_to_LFSR.
+ngc" ...

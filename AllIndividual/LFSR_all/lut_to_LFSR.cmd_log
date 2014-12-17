@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/CA14/finalProject/CompArchFPGAPianoFinal/AllIndividual/LFSR_all/lut_to_LFSR.xst" -ofn "C:/CA14/finalProject/CompArchFPGAPianoFinal/AllIndividual/LFSR_all/lut_to_LFSR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1000-ft256-5 lut_to_LFSR.ngc lut_to_LFSR.ngd  

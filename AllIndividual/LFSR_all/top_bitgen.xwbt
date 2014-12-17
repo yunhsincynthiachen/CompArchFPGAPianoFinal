@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\AllIndividual\LFSR_all\top.ncd
+OUTFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\AllIndividual\LFSR_all\top.bit
+FAMILY=Spartan3
+PART=xc3s1000-5ft256
+WORKINGDIR=C:\CA14\finalProject\CompArchFPGAPianoFinal\AllIndividual\LFSR_all
+LICENSE=WebPack
+USER_INFO=210941021_0_0_915

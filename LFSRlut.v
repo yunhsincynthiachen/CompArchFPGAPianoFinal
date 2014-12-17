@@ -1,5 +1,5 @@
 // CompArch Final Project
-// Piano LUT
+// Piano LFSR LUT
 // Detects switches being pressed on FPGA and enables the notes
 
 module LFSR_lut(sw_0,sw_1,sw_2,sw_3,sw_4,sw_5,sw_6,sw_7,LFSR1_EN,LFSR2_EN,LFSR3_EN,LFSR4_EN,LFSR5_EN,LFSR6_EN,LFSR7_EN,LFSR8_EN);
