@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGA_Piano\top.ncd
-OUTFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGA_Piano\top.bit
-FAMILY=Spartan3
-PART=xc3s1000-4ft256
-WORKINGDIR=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGA_Piano
-LICENSE=WebPack
-USER_INFO=210941021_0_0_915

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/ychen1/Documents/2014FallCourses/ComputerArchitecture/CompArchFPGAPianoFinal2/LFSR/top_LFSR.xst" -ofn "C:/Users/ychen1/Documents/2014FallCourses/ComputerArchitecture/CompArchFPGAPianoFinal2/LFSR/top_LFSR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/ychen1/Documents/2014FallCourses/ComputerArchitecture/CompArchFPGAPianoFinal2/top.ucf -p xc3s1000-ft256-5 top_LFSR.ngc top_LFSR.ngd  
+map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o top_LFSR_map.ncd top_LFSR.ngd top_LFSR.pcf 
+par -w -intstyle ise -ol high -t 1 top_LFSR_map.ncd top_LFSR.ncd top_LFSR.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml top_LFSR.twx top_LFSR.ncd -o top_LFSR.twr top_LFSR.pcf 

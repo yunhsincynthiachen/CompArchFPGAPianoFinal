@@ -1,5 +1,0 @@
-verilog work "../LFSRlut.v"
-verilog work "../LFSR.v"
-verilog work "../inputConditioner_cc.v"
-verilog work "../LFSR_to_LUT.v"
-verilog work "../top_LUT.v"

@@ -1,0 +1,17 @@
+vlog -reportprogress 300 -work work piano_combined_modelsim.v
+vsim -voptargs="+acc" test_all_notes
+
+add wave -position insertpoint  \
+sim:/test_all_notes/clk \
+sim:/test_all_notes/sw \
+sim:/test_all_notes/speaker8 \
+sim:/test_all_notes/speaker7 \
+sim:/test_all_notes/speaker6 \
+sim:/test_all_notes/speaker5 \
+sim:/test_all_notes/speaker4 \
+sim:/test_all_notes/speaker3 \
+sim:/test_all_notes/speaker2 \
+sim:/test_all_notes/speaker1 
+run 10000000
+
+wave zoom full

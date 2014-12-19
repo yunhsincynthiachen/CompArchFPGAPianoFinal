@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGAPianoLFSR\top_LUT.ncd
-OUTFILE=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGAPianoLFSR\top_LUT.bit
-FAMILY=Spartan3
-PART=xc3s1000-5ft256
-WORKINGDIR=C:\CA14\finalProject\CompArchFPGAPianoFinal\FPGAPianoLFSR
-LICENSE=WebPack
-USER_INFO=210941021_0_0_915

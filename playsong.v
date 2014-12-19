@@ -1,8 +1,8 @@
-module pull_all_truelove(clk,speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8,button_en);
-input button_en, clk;
+module pull_all_truelove(clk,sw_1, speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8);
+input sw_1, clk;
 output speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8;
 
-inputconditioner incon(clk,button_en,conditioned);
+inputconditioner incon(clk,sw_1,conditioned);
 playSong trueloveskiss_song(clk,conditioned,speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8);
 
 endmodule
@@ -44,41 +44,89 @@ always @(posedge clk ) begin
 end
 endmodule
 
-module playSong(clk, button_en,speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8);
+module trueloveskiss(clk, line, speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8);
+input clk;
+input[7:0] line;
 output speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8;
-wire [7:0] song [8:0];
-input clk, button_en;
 
-line1 = 8'b10101000; //CEG
-line2 = 8'b00000001; //C2
-line3 = 8'b00000010; //B
-line4 = 8'b00000001; //C2
-line5 = 8'b00001000; //G
-line6 = 8'b00100000; //E
-line7 = 8'b01000000; //D
-line8 = 8'b00100000; //E
-line9 = 8'b10101000; //CEG
+wire[16:0] counter1,counter2,counter3,counter4;
+wire[15:0] counter5,counter6,counter7,counter8;
+wire En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2;
 
-assign song[0] = line1;
-assign song[1] = line2;
-assign song[2] = line3;
-assign song[3] = line4;
-assign song[4] = line5;
-assign song[5] = line6;
-assign song[6] = line7;
-assign song[7] = line8;
-assign song[8] = line9;
+lut LUT(line[0],line[1],line[2],line[3],line[4],line[5],line[6],line[7], En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2);
 
-always @(button_en) begin
+musicC cnote(clk, speaker1, counter1, En_C);
+musicD dnote(clk, speaker2, counter2, En_D);
+musicE enote(clk, speaker3, counter3, En_E);
+musicF fnote(clk, speaker4, counter4, En_F);
+musicG gnote(clk, speaker5, counter5, En_G);
+musicA anote(clk, speaker6, counter6, En_A);
+musicB bnote(clk, speaker7, counter7, En_B);
+musicC2 c2note(clk, speaker8, counter8, En_C2);
 
-generate
-genvar i;
+endmodule 
 
-for (i=0; i<9; i=i+1) begin: song
-trueloveskiss kiss(clk,song[i],speaker1,speaker2,speaker3,speaker4,speaker5,speaker6,speaker7,speaker8);
+module lut(sw_0, sw_1, sw_2, sw_3, sw_4, sw_5, sw_6, sw_7, En_C, En_D, En_E, En_F, En_G, En_A, En_B, En_C2);
+input sw_0, sw_1, sw_2, sw_3, sw_4, sw_5, sw_6, sw_7;
+
+output reg En_C = 'b0;
+output reg En_D = 'b0;
+output reg En_E = 'b0;
+output reg En_F = 'b0;
+output reg En_G = 'b0;
+output reg En_A = 'b0;
+output reg En_B = 'b0;
+output reg En_C2 = 'b0;
+
+always@(sw_0,sw_1,sw_2,sw_3,sw_4,sw_5,sw_6,sw_7) begin
+	En_C2 = sw_7;
+	En_B = sw_6;
+	En_A = sw_5;
+	En_G = sw_4;
+	En_F = sw_3;
+	En_E = sw_2;
+	En_D = sw_1;
+	En_C = sw_0;
 end
-endgenerate
+endmodule 
 
+module test_playsong;
+reg clk;
+reg [7:0] line;
+wire c, d, e, f, g, a, b, c2;
+
+parameter line1 = 8'b10101000; //CEG
+parameter line2 = 8'b00000001; //C2
+parameter line3 = 8'b00000010; //B
+parameter line4 = 8'b00000001; //C2
+parameter line5 = 8'b00001000; //G
+parameter line6 = 8'b00100000; //E
+parameter line7 = 8'b01000000; //D
+parameter line8 = 8'b00100000; //E
+parameter line9 = 8'b10101000; //CEG
+
+trueloveskiss trueloves(clk,line,c,d,e,f,g,a,b,c2);
+
+initial clk = 0;
+always #20 clk=!clk;
+
+initial begin
+line = line1;
+#9900000
+line = line2;
+#9900000
+line = line3;
+#9900000
+line = line4;
+#9900000
+line = line5;
+#9900000
+line = line6;
+#9900000
+line = line7;
+#9900000
+line = line8;
+#9900000
+line = line9;
 end
-
 endmodule 

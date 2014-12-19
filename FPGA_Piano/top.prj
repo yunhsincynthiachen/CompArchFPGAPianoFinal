@@ -1,5 +1,0 @@
-verilog work "../piano_lut_cc.v"
-verilog work "../notes.v"
-verilog work "../inputConditioner_cc.v"
-verilog work "../lut_to_notes.v"
-verilog work "top.v"
